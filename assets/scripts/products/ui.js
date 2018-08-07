@@ -27,20 +27,29 @@ const getAllProductFail = function (error) {
   console.log('Error in sign up is ', error)
 }
 
-const deleteProductSuccess = function (deleteProductResponse) {
+const getDeleteProductSuccess = function (deleteProductResponse) {
   console.log('delete product was success ', deleteProductResponse)
 }
 
-const deleteProductFail = function (deleteProductFailResponse) {
+const getDeleteProductFail = function (deleteProductFailResponse) {
   console.log('delete failed here ', deleteProductFailResponse)
 }
 
-const updateProductSuccess = function (updateProductResponse) {
+const getUpdateProductSuccess = function (updateProductResponse) {
   console.log('update was success ', updateProductResponse)
 }
 
-const updateProductFail = function (updateProductFailResponse) {
+const getUpdateProductFail = function (updateProductFailResponse) {
   console.log('update failed here ', updateProductFailResponse)
+}
+
+const getViewProductSuccess = function (viewProductResponse) {
+  console.log('view product was success ', viewProductResponse)
+  $('#prod_view').html(viewProductResponse.product)
+}
+
+const getViewProductFail = function (viewProductFailResponse) {
+  console.log('view product failed here ', viewProductFailResponse)
 }
 
 module.exports = {
@@ -48,9 +57,11 @@ module.exports = {
   createProductFail,
   getAllProductSuccess,
   getAllProductFail,
-  deleteProductSuccess,
-  deleteProductFail,
-  updateProductSuccess,
-  updateProductFail
+  getDeleteProductSuccess,
+  getDeleteProductFail,
+  getUpdateProductSuccess,
+  getUpdateProductFail,
+  getViewProductSuccess,
+  getViewProductFail
 
 }

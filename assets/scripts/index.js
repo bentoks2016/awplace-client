@@ -19,4 +19,5 @@ $(() => {
   $('#show_products').on('click', prodEvents.onGetAllProducts)
   $('#update_product').on('submit', prodEvents.onUpdateProduct)
   $('#delete_product').on('submit', prodEvents.onDeleteProduct)
+  $('#view_product').on('submit', prodEvents.onViewProduct)
 })

@@ -11,82 +11,91 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>Awplace Marketplace</h1>
-      <div class="row">
-        <div class="column">
+  <body>
+  <h1>Awplace Marketplace</h1>
+  <div class="row">
+    <div class="column">
       <div class="main-content">
-            <h3>User Sign Up </h3>
-            <div id="formSignUp">
+        <h3>User Sign Up </h3>
+        <div id="formSignUp">
 
-              <form id="signUpForm">
-                <input name="credentials[email]" type="text" placeholder="email" required><br>
-                <input name="credentials[password]" type="password" placeholder="password" required><br>
-                <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" required><br>
-                <button type="submit"> Sign Up</button>
-              </form>
+          <form id="signUpForm">
+            <input name="credentials[email]" type="text" placeholder="email" required><br>
+            <input name="credentials[password]" type="password" placeholder="password" required><br>
+            <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" required><br>
+            <button type="submit"> Sign Up</button>
+          </form>
 
 
-              <h3>Please sign In </h3>
+          <h3>Please sign In </h3>
 
-              <form id="signInForm">
-                <input name="credentials[email]" type="text" placeholder="email" required><br>
-                <input name="credentials[password]" type="password" placeholder="password" required><br>
-                <button type="submit"> Sign In</button>
-              </form>
-            </div>
-
-            <h3> Password change </h3>
-            <form id="password_change">
-              <input type="text" name="passwords[old]" placeholder="Old Password" required><br>
-              <input type="text" name="passwords[new]" placeholder="New Password" required><br>
-              <button type="submit"> Submit</button>
-            </form>
-            <button id="sign-out" type="submit"> Sign Out</button>
-
-          </div>
-        </div>
-        <div class="column">
-          <div>
-            <h2>Add new product</h2>
-            <form id="create_product">
-              <input name="product[name]" type="text" placeholder="product name" required><br>
-              <input name="product[price]" type="number" placeholder="your price" required><br>
-              <input name="product[description]" type="text" placeholder="product description" required><br>
-              <input name="product[location]" type="text" placeholder="product location" required><br>
-              <button id="product_submit" type="submit">Add a product </button>
-            </form>
-          </div>
-          <div>
-            <h2> get all your products </h2>
-            <button id="show_products" type="submit">See your products</button>
-              <div id="product_display">
-                <h4>show products</h4>
-
-          </div>
-        </div>
-        <div>
-          <h4> product update</h4>
-          <form id="update_product">
-            <input name="product[id]" type="number" placeholder="product id" required><br>
-            <input name="product[name]" type="text" placeholder="product name" required><br>
-            <input name="product[price]" type="number" placeholder="product price" required><br>
-            <input name="product[description]" type="text" placeholder="product description" required><br>
-            <input name="product[location]" type="text" placeholder="product location" required><br>
-            <button id="product_update" type="submit">update product </button>
+          <form id="signInForm">
+            <input name="credentials[email]" type="text" placeholder="email" required><br>
+            <input name="credentials[password]" type="password" placeholder="password" required><br>
+            <button type="submit"> Sign In</button>
           </form>
         </div>
-        <div>
-          <h4> delete a product</h4>
-            <form id="delete_product">
-              <input name="product[id]" type="number" placeholder="product id" required><br>
-              <button id="product_delete" type="submit">delete product</button>
-            </form>
 
+        <h3> Password change </h3>
+        <form id="password_change">
+          <input type="text" name="passwords[old]" placeholder="Old Password" required><br>
+          <input type="text" name="passwords[new]" placeholder="New Password" required><br>
+          <button type="submit"> Submit</button>
+        </form>
+        <button id="sign-out" type="submit"> Sign Out</button>
+
+      </div>
+    </div>
+    <div class="column">
+      <div>
+        <h2>Add new product</h2>
+        <form id="create_product">
+          <input name="product[name]" type="text" placeholder="product name" required><br>
+          <input name="product[price]" type="number" placeholder="your price" required><br>
+          <input name="product[description]" type="text" placeholder="product description" required><br>
+          <input name="product[location]" type="text" placeholder="product location" required><br>
+          <button id="product_submit" type="submit">Add a product </button>
+        </form>
+      </div>
+      <div>
+        <h2> get all your products </h2>
+        <button id="show_products" type="submit">See your products</button>
+        <div id="product_display">
+          <h4>display all products</h4>
 
         </div>
       </div>
-    </div>
+        <div>
+  <h4> product update</h4>
+  <form id="update_product">
+    <input name="product[id]" type="number" placeholder="product id" required><br>
+    <input name="product[name]" type="text" placeholder="product name" required><br>
+    <input name="product[price]" type="number" placeholder="product price" required><br>
+    <input name="product[description]" type="text" placeholder="product description" required><br>
+    <input name="product[location]" type="text" placeholder="product location" required><br>
+    <button id="product_update" type="submit">update product </button>
+  </form>
+</div>
+<div>
+  <h4> delete a product</h4>
+  <form id="delete_product">
+    <input name="product[id]" type="number" placeholder="product id" required><br>
+    <button id="product_delete" type="submit">delete product</button>
+  </form>
+</div>
+<div>
+  <h4>show a product</h4>
+  <form id="view_product">
+    <input name="product[id]" type="number" placeholder="product id" required><br>
+    <button id="product_view" type="submit">view this product</button>
+  </form>
+  <div id="prod_view">
+
+  </div>
+
+</div>
+</div>
+</div>
 
 
     </body>

@@ -49,9 +49,21 @@ const onDeleteProduct = function (event) {
     .catch(productUi.getDeleteProductError)
 }
 
+const onViewProduct = function (event) {
+  event.preventDefault()
+  console.log('this is view 1')
+  const data = getFormFields(event.target)
+  console.log('data is ', data)
+  productApi.prodView(data.product)
+
+    .then(productUi.getViewProductSuccess)
+    .catch(productUi.getViewProductFail)
+}
+
 module.exports = {
   onCreateProduct,
   onGetAllProducts,
   onUpdateProduct,
-  onDeleteProduct
+  onDeleteProduct,
+  onViewProduct
 }

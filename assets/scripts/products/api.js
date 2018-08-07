@@ -50,9 +50,22 @@ const prodDelete = function (product) {
   })
 }
 
+const prodView = function (product) {
+  console.log('this is one product View')
+  console.log('view product is ', product)
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + `/products/${product.id}`,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   productCreate,
   prodShowAll,
   prodDelete,
-  prodUpdate
+  prodUpdate,
+  prodView
 }
