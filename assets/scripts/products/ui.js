@@ -12,8 +12,7 @@ const createProductFail = function (failCreateProd) {
 
 const getAllProductSuccess = function (getAllProductResponse) {
   console.log('console 3')
-  // console.log('getAllProductResponse is ', getAllProductResponse)
-  // console.log('this is for response ', getAllProductResponse.Products)
+
   store.list = getAllProductResponse.products
   console.log(store.list)
   console.log('console 4')

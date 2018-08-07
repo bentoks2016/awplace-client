@@ -21,9 +21,7 @@ const onGetAllProducts = function (event) {
   const test = 'test'
   console.log('console 1')
   productApi.prodShowAll(test)
-  // .then(function (response) {
-  //   console.log('response from getall products is ', response)
-  // })
+
     .then(productUi.getAllProductSuccess)
     .catch(productUi.getAllProductError)
 }
