@@ -14,6 +14,7 @@ const signInSuccess = function (response) {
   console.log('this is a sign in success', response.user)
   $('#formSignUp').toggleClass('hide')
   $('#formSignOut').toggleClass('hide')
+  $('#prod_body').toggleClass('hide')
   store.user = response.user
   console.log(store.user)
 }
@@ -26,6 +27,7 @@ const signOutSuccess = function (signOutResponse) {
   console.log('signOutResponse is ', signOutResponse)
   $('#formSignOut').toggleClass('hide')
   $('#formSignUp').toggleClass('hide')
+  $('#prod_body').toggleClass('hide')
 }
 
 const signOutFailure = function (error) {
