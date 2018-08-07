@@ -1,2 +1,14 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+// .row::after {
+//   clear: both;
+//   content: '';
+//   display: table;
+// }
