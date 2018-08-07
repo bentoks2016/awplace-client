@@ -49,8 +49,8 @@ const onChangePassword = function (event) {
 }
 
 module.exports = {
-  onSignUp: onSignUp,
-  onSignIn: onSignIn,
-  onSignOut: onSignOut,
-  onChangePassword: onChangePassword
+  onSignUp,
+  onSignIn,
+  onSignOut,
+  onChangePassword
 }
