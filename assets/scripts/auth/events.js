@@ -10,13 +10,8 @@ const onSignUp = function (event) {
   console.log('data is ', data)
 
   authApi.signUp(data)
-    .then(function (signUpResponse) {
-      console.log('the sign of response is', signUpResponse)
-    })
-
-    .catch(function (signUpError) {
-      console.log('sign up error is ', signUpError)
-    })
+    .then(ui.signUpResponse)
+    .catch(ui.signUpError)
 }
 
 const onSignIn = function (event) {
