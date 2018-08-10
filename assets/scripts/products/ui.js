@@ -1,6 +1,7 @@
 'strict'
 
 const store = require('../store')
+const tableCreate = require('./tableCreate')
 
 const createProductSuccess = function (createProductResponse) {
   console.log('product was created here ', createProductResponse)
@@ -18,11 +19,15 @@ const getAllProductSuccess = function (getAllProductResponse) {
   store.list = getAllProductResponse.products
   console.log(store.list)
   console.log('console 4')
-  $('#product_display').append(store.list)
-  store.list.forEach((product) => {
-    $('#product_display').append(`${product.name}\n`)
-  })
-  console.log('console 5')
+  console.log(getAllProductResponse.products)
+  console.log(tableCreate.tableCreate(getAllProductResponse.products)) // ADD ME!
+  $('#products-table-body').append(tableCreate.tableCreate(getAllProductResponse.products))
+  $('#exampleModal').modal('toggle')
+  // $('#product_display').append(store.list)
+  // store.list.forEach((product) => {
+  //   $('#product_display').append(`${product.name}\n`)
+  // })
+  // console.log('console 5')
 }
 
 const getAllProductFail = function (error) {
@@ -50,6 +55,8 @@ const getUpdateProductFail = function (updateProductFailResponse) {
 const getViewProductSuccess = function (viewProductResponse) {
   console.log('view product was success ', viewProductResponse)
   $('#prod_view').html(viewProductResponse.product)
+  // $('#products-table-body').append(tableCreate.tableCreate(viewProductResponse.products))
+  // $('#exampleModal').modal('toggle')
 }
 
 const getViewProductFail = function (viewProductFailResponse) {
