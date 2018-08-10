@@ -13,6 +13,7 @@ const tableCreate = function (json) {
     bodyRows += '<td>' + json[i].price + '</td>'
     bodyRows += '<td>' + json[i].description + '</td>'
     bodyRows += '<td>' + json[i].location + '</td>'
+
   }
   return bodyRows
 }
