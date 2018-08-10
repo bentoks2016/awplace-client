@@ -5,10 +5,12 @@ const tableCreate = require('./tableCreate')
 
 const createProductSuccess = function (createProductResponse) {
   console.log('product was created here ', createProductResponse)
+  $('#successfulProdCreate').toggleClass('hide').fadeOut(3000)
 }
 
 const createProductFail = function (failCreateProd) {
   console.log('sign up error is ', failCreateProd)
+  $('#failedProdCreate').toggleClass('hide').fadeOut(3000)
 }
 
 const getAllProductSuccess = function (getAllProductResponse) {
@@ -34,10 +36,12 @@ const getAllProductFail = function (error) {
 
 const getDeleteProductSuccess = function (deleteProductResponse) {
   console.log('delete product was success ', deleteProductResponse)
+  $('#successfulProdDelete').toggleClass('hide').fadeOut(3000)
 }
 
 const getDeleteProductFail = function (deleteProductFailResponse) {
   console.log('delete failed here ', deleteProductFailResponse)
+  $('#failedProdDelete').toggleClass('hide').fadeOut(3000)
 }
 
 const getUpdateProductSuccess = function (updateProductResponse) {
