@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4hGqbCfPyrkGRy57TbG6xu0Jhs3-d34I&libraries=places"></script> -->
+</head>
+
+<body>
+  <!-- <ul class="nav nav-pills" >
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Sign In</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Sign Up</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul> -->
+  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD4hGqbCfPyrkGRy57TbG6xu0Jhs3-d34I&libraries=places"></script> -->
+</head>
+
+<body>
+
+  <h1>Awplace Marketplace</h1>
+
+  <!--This section creates notification alerts  -->
+
+<div id="successful" class="alert alert-success alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  You have signed up successfully. Please sign in to access.
+</div>
+
+<div id="failed" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Sign up Failed!</strong> User already exists.
+</div>
+
+<div id="successfulSignIn" class="alert alert-success alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  You have signed in successfully.
+</div>
+
+<div id="failedSignIn" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Sign In Failed!</strong> Username/password error.
+</div>
+
+<div id="successfulSignOut" class="alert alert-success alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  You have successfully signed out.
+</div>
+
+<div id="failedSignOut" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Sign Out Failed!</strong>
+</div>
+
+<div id="successfulProdCreate" class="alert alert-success alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  New Product Successfully Registered.
+</div>
+
+<div id="failedProdCreate" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  New Product Registration, Not Successful.
+</div>
+
+<div id="successfulProdDelete" class="alert alert-success alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Product Successfully Deleted.
+</div>
+
+<div id="failedProdDelete" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Product Delete, Not Successful.
+</div>
+
+<div id="successfulProdUpdate" class="alert alert-success alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Product Successfully Updated.
+</div>
+
+<div id="faiProdDocupdate" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Product Update, Not Successful.
+</div>
+
+<div id="successfulPassword" class="alert alert-success alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  You have successfully changed password.
+</div>
+
+<div id="failedPassword" class="alert alert-danger alert-dismissible hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Password Change, Not Successful.
+</div>
+
+<!--This ends the alerts section  -->
+
+<!-- modal show button  -->
+<div class="modal fade" id="show_product_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Your Products</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+       <!-- <div class="modal-body"> -->
+
+<div class="modal">
+
+</div>
+ <!-- </div> -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+
+
+<!-- modal show ends here -->
+
+<!-- Modal begins here -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Product List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="product-list" class="modal-body">
+                      <table class="table table-striped" >
+                        <thead>
+                          <tr>
+                            <th>Product Id</th>
+                            <th>Product Name</th>
+                            <th>Product Price</th>
+                            <th>Description</th>
+                            <th>Location</th>
+                          </tr>
+                        </thead>
+                        <tbody id='products-table-body' >
+                        </tbody>
+                      </table>
+                    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal ends here -->
+
+          <div class="row">
+      <div class="col-md-6" id="column1">
+        <div class="main-content">
+          <div id="formSignUp">
+            <h3>User Sign Up </h3>
+            <form id="signUpForm">
+              <input name="credentials[email]" type="text" placeholder="email" required><br>
+              <input name="credentials[password]" type="password" placeholder="password" required><br>
+              <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" required><br>
+              <button type="submit"> Sign Up</button>
+            </form>
+
+
+            <h3>Please sign In </h3>
+
+            <form id="signInForm">
+              <input name="credentials[email]" type="text" placeholder="email" required><br>
+              <input name="credentials[password]" type="password" placeholder="password" required><br>
+              <button type="submit"> Sign In</button>
+            </form>
+          </div>
+          <div id="formSignOut" class="hide">
+            <h3> Password change </h3>
+            <form id="password_change">
+              <input type="text" name="passwords[old]" placeholder="Old Password" required><br>
+              <input type="text" name="passwords[new]" placeholder="New Password" required><br>
+              <button type="submit"> Submit</button>
+            </form>
+            <button id="sign-out" type="submit"> Sign Out</button>
+          </div>
+        </div>
+      </div>
+      <div id="prod_body" class="col-md-6 hide">
+        <div class="column">
+          <div>
+            <h2>Add new product</h2>
+            <form id="create_product">
+              <input name="product[name]" type="text" placeholder="product name" required><br>
+              <input name="product[price]" type="number" placeholder="your price" required><br>
+              <input name="product[description]" type="text" placeholder="product description" required><br>
+              <input name="product[location]" type="text" placeholder="product location" required><br>
+              <input name="product[image]" type="text" placeholder="paste image url here"><br>
+              <input type="file" name="img" multiple>
+              <button id="product_submit" type="submit">Add a product </button>
+            </form>
+          </div>
+          <div>
+            <h2> get all your products </h2>
+            <button id="show_products" type="submit">See your products</button>
+            <div id="product_display">
+              <h4>display all products</h4>
+
+            </div>
+          </div>
+          <div>
+            <h4> product update</h4>
+            <form id="update_product">
+              <input name="product[id]" type="number" placeholder="product id" required><br>
+              <input name="product[name]" type="text" placeholder="product name" required><br>
+              <input name="product[price]" type="number" placeholder="product price" required><br>
+              <input name="product[description]" type="text" placeholder="product description" required><br>
+              <input name="product[location]" type="text" placeholder="product location" required><br>
+              <input name="product[image]" type="text" placeholder="paste image url here"><br>
+              <input type="file" name="img" multiple>
+              <button id="product_update" type="submit">update product </button>
+            </form>
+          </div>
+          <div>
+            <h4> delete a product</h4>
+            <form id="delete_product">
+              <input name="product[id]" type="number" placeholder="product id" required><br>
+              <button id="product_delete" type="submit">delete product</button>
+            </form>
+          </div>
+          <div>
+            <h4>show a product</h4>
+            <form id="view_product">
+              <input name="product[id]" type="number" placeholder="product id" required><br>
+              <button id="product_view" type="submit">view this product</button>
+            </form>
+            <div id="prod_view">
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+
+</html>
